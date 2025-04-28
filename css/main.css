@@ -1,0 +1,147 @@
+
+:root {
+	--red: #af3029;
+	--blue: #205EA6;
+}
+
+html {
+	font-family: sans-serif;
+	font-size: 15px;
+	line-height: 1.3rem;
+	color: #100F0F;
+/*	background-color: #FFFCF0;*/
+}
+
+body {
+	width: 900px;
+	max-width: calc(100% - 40px);
+
+	margin: 100px auto 200px auto;
+}
+
+div.cover {
+	display: block;
+	width: 100%;
+	height: 400px;
+	background-image: url(/img/san-diego.avif);
+	background-position: center;
+	background-size: cover;
+	border-radius: 5px;
+}
+
+h1 {
+	color: var(--red);
+	line-height: 2rem;
+	margin-bottom: -10px;
+}
+
+h2 {
+	font-size: 1.3rem;
+}
+
+h2, h3, h4, h5, h6 {
+	color: #6f6e69;
+}
+
+h2 {
+	margin-top: 40px;
+}
+
+h4 {
+	font-weight: 400;
+	font-style: italic;
+	margin-bottom: 20px;
+}
+
+p {
+	max-width: 600px;
+}
+
+p.leed {
+	font-size: 1.2rem;
+	line-height: 1.6rem;
+	max-width: 700px;
+}
+
+ul.media li {
+	margin-bottom: 10px;
+}
+
+main {
+	display: grid;
+	grid-template-columns: .5fr .5fr;
+	grid-column-gap: 40px;
+}
+
+a {
+	color: var(--blue);
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	text-decoration: underline;
+}
+
+a.button {
+	display: inline-block;
+	padding: 10px 20px;
+	color: #fff;
+	background-color: var(--blue);
+	border-radius: 5px;
+	font-weight: 700;
+	margin-top: 20px;
+	margin-bottom: 40px;
+}
+
+@media (max-width: 1000px) {
+	body {
+		width: 600px;
+	}
+
+	div.cover {
+		height: 200px;
+	}
+}
+
+.projects div {
+	padding: 16px;
+	margin: 20px 0;
+	border-radius: 5px;
+/*	border: 1px solid #999;*/
+	background-color: #f6f6f6;
+}
+
+.projects strong {
+	display: block;
+	margin-bottom: 5px;
+}
+
+div.people {
+	display: flex;
+	align-items: flex-start;
+	flex-wrap: wrap;
+}
+
+div.person {
+	display: grid;
+	grid-template-columns: 240px;
+	margin-right: 20px;
+	margin-top: 40px;
+}
+
+div.person img {
+	height: 200px;
+	width: 200px;
+	border-radius: 5px;
+	margin-bottom: 10px;
+}
+
+div.person .name {
+	font-size: 1.1rem;
+	margin-bottom: 10px;
+	font-weight: 700;
+}
+
+div.person .title {
+	font-size: .95rem;
+}
