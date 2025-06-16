@@ -21,12 +21,20 @@ body {
 
 div.cover {
 	display: block;
-	width: 100%;
+	width: calc(100% - 40px);
 	height: 400px;
-	background-image: url(/img/san-diego.avif);
+	background-image: url(/img/banner1.jpg);
 	background-position: center;
 	background-size: cover;
 	border-radius: 5px;
+	padding: 20px;
+	margin-top: 40px;
+}
+
+div.cover p {
+	color: #fff;
+	font-weight: 700;
+	margin-top: 0;
 }
 
 h1 {
@@ -45,6 +53,7 @@ h2, h3, h4, h5, h6 {
 
 h2 {
 	margin-top: 40px;
+	color: var(--blue);
 }
 
 h4 {
@@ -134,6 +143,7 @@ div.person img {
 	width: 200px;
 	border-radius: 5px;
 	margin-bottom: 10px;
+	filter: grayscale(100%);
 }
 
 div.person .name {
@@ -144,4 +154,37 @@ div.person .name {
 
 div.person .title {
 	font-size: .95rem;
+}
+
+div.person .social {
+	margin-top: 10px;
+	font-size: 1.6rem;
+}
+
+div.person .social a {
+	color: #e0e0e0;
+	text-decoration: none;
+}
+
+div.person .social a:hover {
+	color: var(--blue);
+}
+
+.agenda {
+	display: grid;
+	grid-template-columns: 120px 120px 300px;
+	background-color: #f6f6f6;
+	padding: 15px 20px 10px 20px;
+	border-radius: 5px;
+	width: calc(100% - 40px);
+	/* gap: 16px; */
+}
+
+.agenda div {
+	padding: 0 10px 10px 0;
+	background-color: transparent;
+}
+
+.agenda .th {
+	font-weight: 700;
 }
