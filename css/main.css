@@ -102,15 +102,7 @@ a.button {
 	margin-bottom: 40px;
 }
 
-@media (max-width: 1000px) {
-	body {
-		width: 600px;
-	}
 
-	div.cover {
-		height: 200px;
-	}
-}
 
 .projects div {
 	padding: 16px;
@@ -171,20 +163,104 @@ div.person .social a:hover {
 }
 
 .agenda {
-	display: grid;
-	grid-template-columns: 120px 120px 300px;
-	background-color: #f6f6f6;
-	padding: 15px 20px 10px 20px;
-	border-radius: 5px;
-	width: calc(100% - 40px);
+	/*background-color: #f6f6f6;*/
+	/*padding: 15px 20px 10px 20px;*/
+	/*border-radius: 5px;*/
+	/*width: calc(100% - 40px);*/
 	/* gap: 16px; */
 }
 
+.agenda .tr {
+	
+	display: grid;
+	grid-template-columns: 120px 120px 1fr;
+	
+	border-bottom: 1px dotted var(--blue);
+
+	padding: 5px 10px;
+}
+
+.agenda .tr.th {
+	background-color: var(--blue);
+	border: none;
+	color: #fff;
+	font-weight: 700;
+	border-radius: 5px;
+	position: sticky;
+	top: 0;
+}
+
 .agenda div {
-	padding: 0 10px 10px 0;
+	/*padding: 0 10px 10px 0;*/
 	background-color: transparent;
 }
 
-.agenda .th {
-	font-weight: 700;
+.agenda ol {
+	margin: 5px 0;
+	padding-left: 25px;
+	color: var(--blue);
+	font-style: italic;
+}
+
+span.keywords {
+	display: block;
+	font-style: italic;
+	color: var(--red);
+}
+
+.narrow {
+	display: none;
+}
+
+@media (max-width: 1000px) {
+	body {
+		width: 600px;
+	}
+
+	div.cover {
+		height: 200px;
+	}
+}
+
+@media (max-width: 700px) {
+	body {
+		margin-top: 40px;
+	}
+}
+
+@media (max-width: 660px) {
+
+	h1, p.leed {
+		text-align: center;
+	}
+
+	h1 {
+		/*margin-bottom: 20px;*/
+	}
+
+	.narrow {
+		display: revert;
+	}
+	.wide {
+		display: none;
+	}
+
+	p.leed .narrow {
+		display: block;
+	}
+
+	.agenda {
+		width: calc(100% + 40px);
+		margin: 0 -20px;
+		border-radius: 0;
+	}
+
+	.agenda .tr {
+		grid-template-columns: 100px 80px 1fr;
+		padding: 5px 20px;
+	}
+
+	.agenda .tr.th {
+		border-radius: 0;
+	}
 }
